@@ -1,2 +1,4 @@
-# csd-340
-Web Development CSS/HTML5
+# CSD 340 Web Development with HTML and CSS
+## Contributors
++ Sue Sampson
++ Taib Elbaroudi  
