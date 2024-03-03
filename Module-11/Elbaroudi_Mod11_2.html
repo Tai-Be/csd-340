@@ -1,0 +1,54 @@
+<!-- Taib Elbaroudi: Assignment 11.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>"CSD 340 Web Development with HTML and CSS"</title>
+
+</head>
+
+<body>
+
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    
+<p>This is an interactive To Do List. Type in your first item in the text book, then click Add. Click the Display button to see current items in the list. Click on Delete Lasr Entry if you'd like to remove the last entry. </p>
+   
+ <label for="entryInput"></label>
+    <input type="text" id="entryInput">
+    <button onclick="addElement()">Add</button>
+    <button onclick="deleteLastEntry()">Delete Last Entry</button>
+    <button onclick="displayEntries()">Display</button>
+
+    <script>
+        let array = [];
+
+        function addElement() {
+            let inputText = document.getElementById("entryInput").value;
+            array.push(inputText);
+            alert("'" + inputText + "' added to the array at position " + array.length);
+        }
+
+        function deleteLastEntry() {
+            if (array.length > 0) {
+                let deletedEntry = array.pop();
+                alert("'" + deletedEntry + "' deleted from the array");
+            } else {
+                alert("Array is empty. No entry to delete.");
+            }
+        }
+
+        function displayEntries() {
+            if (array.length > 0) {
+                let displayText = "";
+                for (var i = 0; i < array.length; i++) {
+                    displayText += (i + 1) + ". " + array[i] + "\n";
+                }
+                alert("Array Contents:\n" + displayText);
+            } else {
+                alert("Array is empty. Nothing to display.");
+            }
+        }
+    
+    </script>
+   
+</body>
+</html>
